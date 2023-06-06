@@ -1,0 +1,42 @@
+{
+  "label": "index.tsx",
+  "file": "apps/merinioWA2/src/index.tsx",
+  "children": [
+    {
+      "label": "store.dispatch(lookupCompanyLang())",
+      "file": "apps/merinioWA2/src/index.tsx",
+      "children": [
+        {
+          "label": "lookupCompanyLang",
+          "file": "apps/merinioWA2/src/store/actions/auth.js",
+          "children": [
+            {
+              "label": "OpenAPI.post('/lookup', { company: co })",
+              "file": ""
+            },
+            {
+              "label": "dispatch({ type: 'SET_COMPANY_LANG', lang: lang })",
+              "file": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "App.tsx",
+      "file": "apps/merinioWA2/src/App.tsx",
+      "children": [
+        {
+          "label": "PrivateRoute",
+          "file": "apps/merinioWA2/src/components/PrivateRoute.js",
+          "children": [
+            {
+              "label": "checkIfUsersRefreshIsNeeded",
+              "file": "apps/merinioWA2/src/store/actions/users.js"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

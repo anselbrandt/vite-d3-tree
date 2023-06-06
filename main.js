@@ -1,26 +1,17 @@
 import "./style.css";
 import { Tree } from "./tree";
-import * as data from "./flare.json";
+import * as data from "./data.json";
 
 document.querySelector("#app").innerHTML = `<div id="graph"></div>`;
 
+// https://github.com/Merinio/merinioApp/blob/develop/apps/merinioWA2/src/index.tsx
+
 const svg = document.getElementById("graph");
 const chart = Tree(data, {
-  label: (d) => d.name,
-  title: (d, n) =>
-    `${n
-      .ancestors()
-      .reverse()
-      .map((d) => d.data.name)
-      .join(".")}`, // hover text
+  label: (d) => d.label,
+  title: (d, n) => `${d.label}`, // hover text
   link: (d, n) =>
-    `https://github.com/prefuse/Flare/${
-      n.children ? "tree" : "blob"
-    }/master/flare/src/${n
-      .ancestors()
-      .reverse()
-      .map((d) => d.data.name)
-      .join("/")}${n.children ? "" : ".as"}`,
+    `https://github.com/Merinio/merinioApp/blob/develop/${d.file}`,
   width: 1152,
 });
 svg.append(chart);
