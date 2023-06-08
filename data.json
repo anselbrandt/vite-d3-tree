@@ -61,8 +61,8 @@
               ]
             },
             {
-              "file": "apps/merinioWA2/src/components/PrivateRoute.js",
               "label": "checkIfResourcesRefreshIsNeeded",
+              "file": "apps/merinioWA2/src/components/PrivateRoute.js",
               "children": [
                 {
                   "file": "apps/merinioWA2/src/store/actions/resources.js",
@@ -427,6 +427,166 @@
                           "label": "dispatch(setValues(templates, 'SET_CONTACT_TEMPLATES', 'contactTemplates'))",
                           "file": "apps/merinioWA2/src/store/actions/resources.js"
                         }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "label": "checkIfSettingsRefreshIsNeeded",
+              "file": "apps/merinioWA2/src/components/PrivateRoute.js",
+              "children": [
+                {
+                  "label": "fetchSettings",
+                  "file": "apps/merinioWA2/src/store/actions/settings.js",
+                  "children": [
+                    {
+                      "label": "Api.get(`/setting`)",
+                      "file": "apps/merinioWA2/src/store/actions/settings.js",
+                      "method": "GET",
+                      "url": "http://localhost:3000/api/setting",
+                      "queryString": []
+                    },
+                    {
+                      "label": "dispatch({ type: 'SET_SETTINGS', settings })",
+                      "file": "apps/merinioWA2/src/store/actions/settings.js"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "label": "Schedule",
+              "file": "apps/merinioWA2/src/Manager/Schedule/Schedule.js",
+              "children": [
+                {
+                  "label": "useApi({ method: 'GET', url: `schedule/notes/notes`, autoExecute: false })",
+                  "file": "apps/merinioWA2/src/Manager/Schedule/Schedule.js",
+                  "method": "GET",
+                  "url": "http://localhost:3000/api/schedule/notes/notes?useNewReturn=true",
+                  "queryString": [{ "name": "useNewReturn", "value": "true" }]
+                },
+                {
+                  "label": "SchedulerMobile",
+                  "file": "apps/merinioWA2/src/Manager/Schedule/components/SchedulerMobile.js"
+                },
+                {
+                  "label": "SchedulerDesktop",
+                  "file": "apps/merinioWA2/src/Manager/Schedule/components/SchedulerDesktop/index.tsx"
+                },
+                {
+                  "label": "useEffect",
+                  "file": "apps/merinioWA2/src/Manager/Schedule/Schedule.js",
+                  "children": [
+                    {
+                      "label": "fetchEvents",
+                      "file": "apps/merinioWA2/src/Manager/Schedule/Schedule.js",
+                      "children": [
+                        {
+                          "label": "Api.post('schedule/schedule/query', getFilter())",
+                          "file": "apps/merinioWA2/src/Manager/Schedule/Schedule.js",
+                          "method": "POST",
+                          "url": "http://localhost:3000/api/schedule/schedule/query",
+                          "queryString": [],
+                          "postData": "{\"rangeStart\":\"2023-05-28T00:00:00\",\"rangeEnd\":\"2023-06-03T23:59:59\",\"alsoMarkPunchEvent\":true,\"useNewReturn\":true,\"markShiftsForLeaveOrVacation\":true,\"returnScheduleContactEvents\":true,\"rangeCheckStartOnly\":true}"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "useFetchMerinioInitialData",
+          "file": "apps/merinioWA2/src/App.tsx",
+          "children": [
+            {
+              "label": "dispatch(fetchShiftsToConfirm())",
+              "file": "apps/merinioWA2/src/components/Hooks/useFetchMerinioInitialData.ts",
+              "children": [
+                {
+                  "label": "fetchShiftsToConfirm",
+                  "file": "apps/merinioWA2/src/store/actions/applicationInfo.js",
+                  "children": [
+                    {
+                      "label": "Api('/schedule/confirm', { params: { userId, useNewReturn: true } })",
+                      "file": "apps/merinioWA2/src/store/actions/applicationInfo.js",
+                      "method": "GET",
+                      "url": "http://localhost:3000/api/schedule/confirm?useNewReturn=true",
+                      "queryString": [
+                        { "name": "useNewReturn", "value": "true" }
+                      ]
+                    },
+                    {
+                      "label": "dispatch({ type: 'SET_SHIFT_TO_CONFIRM', shiftsToConfirm: result })",
+                      "file": "apps/merinioWA2/src/store/actions/applicationInfo.js"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "label": "dispatch(fetchAttributeReminderToConfirm())",
+              "file": "apps/merinioWA2/src/components/Hooks/useFetchMerinioInitialData.ts",
+              "children": [
+                {
+                  "label": "fetchAttributeReminderToConfirm",
+                  "file": "apps/merinioWA2/src/store/actions/applicationInfo.js",
+                  "children": [
+                    {
+                      "label": "Api(`/attributes/contact/events`, { params: { status: 'pendingConfirmation' } })",
+                      "file": "apps/merinioWA2/src/store/actions/applicationInfo.js",
+                      "method": "GET",
+                      "url": "http://localhost:3000/api/attributes/contact/events?status=pendingConfirmation",
+                      "queryString": [
+                        { "name": "status", "value": "pendingConfirmation" }
+                      ]
+                    },
+                    {
+                      "label": "dispatch({ type: 'SET_ATTRIBUTE_REMINDER_TO_CONFIRM', attributeReminderToConfirm: attributeRemindersToConfirm })",
+                      "file": "apps/merinioWA2/src/store/actions/applicationInfo.js"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "label": "prefetchAttributes()",
+              "file": "apps/merinioWA2/src/Api/hooks/resources/useAttributes.ts",
+              "children": [
+                {
+                  "label": "attributesQuery",
+                  "file": "apps/merinioWA2/src/Api/hooks/resources/useAttributes.ts",
+                  "children": [
+                    {
+                      "label": "Api.get(RESSOURCES_ENDPOINTS.attributes)",
+                      "file": "apps/merinioWA2/src/Api/hooks/resources/useAttributes.ts",
+                      "method": "GET",
+                      "url": "http://localhost:3000/api/attributes/attributes",
+                      "queryString": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "label": "prefetchBreaks()",
+              "file": "apps/merinioWA2/src/components/Hooks/useFetchMerinioInitialData.ts",
+              "children": [
+                {
+                  "label": "prefetchBreaks()",
+                  "file": "apps/merinioWA2/src/Api/hooks/resources/useBreaks.ts",
+                  "children": [
+                    {
+                      "label": "Api({ url: RESSOURCES_ENDPOINTS.breaks, method: 'GET', params: { useNewReturn: true } })",
+                      "file": "apps/merinioWA2/src/Api/hooks/resources/useBreaks.ts",
+                      "method": "GET",
+                      "url": "http://localhost:3000/api/breaks/breaks?useNewReturn=true",
+                      "queryString": [
+                        { "name": "useNewReturn", "value": "true" }
                       ]
                     }
                   ]
