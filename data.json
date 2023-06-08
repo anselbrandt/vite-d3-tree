@@ -60,10 +60,15 @@
                   "children": [
                     {
                       "label": "contactConfigs",
+                      "file": "apps/merinioWA2/src/store/actions/resources.js",
                       "children": [
-                        { "label": "Api(resourcesEndpoint.contactConfigs)" },
                         {
-                          "label": "dispatch(setValues(result, 'SET_CONFIGS', 'configs'))"
+                          "label": "Api(resourcesEndpoint.contactConfigs)",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
+                        },
+                        {
+                          "label": "dispatch(setValues(result, 'SET_CONFIGS', 'configs'))",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
                         }
                       ]
                     },
@@ -71,25 +76,41 @@
                       "label": "departments",
                       "file": "apps/merinioWA2/src/store/actions/resources.js",
                       "children": [
-                        { "label": "Api(resourcesEndpoint.departments)" },
-                        { "label": "dispatch(setDepartments(departments))" }
+                        {
+                          "label": "Api(resourcesEndpoint.departments)",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
+                        },
+                        {
+                          "label": "dispatch(setDepartments(departments))",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
+                        }
                       ]
                     },
                     {
                       "label": "hiringData",
                       "file": "apps/merinioWA2/src/store/actions/resources.js",
                       "children": [
-                        { "label": "Api(resourcesEndpoint.hiringData)" },
-                        { "label": "dispatch(setHiringData(res))" }
+                        {
+                          "label": "Api(resourcesEndpoint.hiringData)",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
+                        },
+                        {
+                          "label": "dispatch(setHiringData(res))",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
+                        }
                       ]
                     },
                     {
                       "label": "wagePremium",
                       "file": "apps/merinioWA2/src/store/actions/resources.js",
                       "children": [
-                        { "label": "Api(resourcesEndpoint.wagePremiums)" },
                         {
-                          "label": "dispatch(setValues(result, 'SET_WAGE_PREMIUMS', 'wagePremiums'))"
+                          "label": "Api(resourcesEndpoint.wagePremiums)",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
+                        },
+                        {
+                          "label": "dispatch(setValues(result, 'SET_WAGE_PREMIUMS', 'wagePremiums'))",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
                         }
                       ]
                     },
@@ -97,9 +118,13 @@
                       "label": "punchRules",
                       "file": "apps/merinioWA2/src/store/actions/resources.js",
                       "children": [
-                        { "label": "Api(resourcesEndpoint.punchRules)" },
                         {
-                          "label": " dispatch(setValues(result, 'SET_PUNCH_RULES', 'punchRules'))"
+                          "label": "Api(resourcesEndpoint.punchRules)",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
+                        },
+                        {
+                          "label": " dispatch(setValues(result, 'SET_PUNCH_RULES', 'punchRules'))",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
                         }
                       ]
                     },
@@ -107,9 +132,13 @@
                       "label": "projects",
                       "file": "apps/merinioWA2/src/store/actions/resources.js",
                       "children": [
-                        { "label": "Api(resourcesEndpoint.projects)" },
                         {
-                          "label": "dispatch(setValues(projects, 'SET_PROJECTS', 'projects'))"
+                          "label": "Api(resourcesEndpoint.projects)",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
+                        },
+                        {
+                          "label": "dispatch(setValues(projects, 'SET_PROJECTS', 'projects'))",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
                         }
                       ]
                     },
@@ -117,9 +146,13 @@
                       "label": "projectOwners",
                       "file": "apps/merinioWA2/src/store/actions/resources.js",
                       "children": [
-                        { "label": "Api(resourcesEndpoint.projectOwners)" },
                         {
-                          "label": "dispatch(setValues(projectOwners, 'SET_PROJECT_OWNERS', 'projectOwners'))"
+                          "label": "Api(resourcesEndpoint.projectOwners)",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
+                        },
+                        {
+                          "label": "dispatch(setValues(projectOwners, 'SET_PROJECT_OWNERS', 'projectOwners'))",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
                         }
                       ]
                     },
@@ -128,10 +161,12 @@
                       "file": "apps/merinioWA2/src/store/actions/resources.js",
                       "children": [
                         {
-                          "label": "await Api(resourcesEndpoint.userTemplates)"
+                          "label": "await Api(resourcesEndpoint.userTemplates)",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
                         },
                         {
-                          "label": "dispatch(setValues(result, 'SET_USER_TEMPLATES', 'userTemplates'))"
+                          "label": "dispatch(setValues(result, 'SET_USER_TEMPLATES', 'userTemplates'))",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
                         }
                       ]
                     },
@@ -139,17 +174,27 @@
                       "label": "requestsFields",
                       "file": "apps/merinioWA2/src/store/actions/resources.js",
                       "children": [
-                        { "label": "Api(resourcesEndpoint.requestFields)" },
-                        { "label": "dispatch(setRequestFields(rest))" }
+                        {
+                          "label": "Api(resourcesEndpoint.requestFields)",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
+                        },
+                        {
+                          "label": "dispatch(setRequestFields(rest))",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
+                        }
                       ]
                     },
                     {
                       "label": "scheduleTypes",
                       "file": "apps/merinioWA2/src/store/actions/resources.js",
                       "children": [
-                        { "label": "Api(resourcesEndpoint.scheduleTypes)" },
                         {
-                          "label": "dispatch(setValues(type, 'SET_SCHEDULE_TYPES', 'scheduleTypes'))"
+                          "label": "Api(resourcesEndpoint.scheduleTypes)",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
+                        },
+                        {
+                          "label": "dispatch(setValues(type, 'SET_SCHEDULE_TYPES', 'scheduleTypes'))",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
                         }
                       ]
                     },
@@ -158,10 +203,12 @@
                       "file": "apps/merinioWA2/src/store/actions/resources.js",
                       "children": [
                         {
-                          "label": "Api.get(resourcesEndpoint.scheduleTemplates, { params: { useNewReturn: true } })"
+                          "label": "Api.get(resourcesEndpoint.scheduleTemplates, { params: { useNewReturn: true } })",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
                         },
                         {
-                          "label": "dispatch(setValues(result, 'SET_SCHEDULE_TEMPLATES', 'scheduleTemplates'))"
+                          "label": "dispatch(setValues(result, 'SET_SCHEDULE_TEMPLATES', 'scheduleTemplates'))",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
                         }
                       ]
                     },
@@ -170,10 +217,12 @@
                       "file": "apps/merinioWA2/src/store/actions/resources.js",
                       "children": [
                         {
-                          "label": "Api(resourcesEndpoint.structures)"
+                          "label": "Api(resourcesEndpoint.structures)",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
                         },
                         {
-                          "label": "dispatch(setStructures(res))"
+                          "label": "dispatch(setStructures(res))",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
                         }
                       ]
                     },
@@ -182,10 +231,12 @@
                       "file": "apps/merinioWA2/src/store/actions/resources.js",
                       "children": [
                         {
-                          "label": "Api(resourcesEndpoint.tags)"
+                          "label": "Api(resourcesEndpoint.tags)",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
                         },
                         {
-                          "label": "dispatch(setTags(tags))"
+                          "label": "dispatch(setTags(tags))",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
                         }
                       ]
                     },
@@ -193,9 +244,13 @@
                       "label": "teams",
                       "file": "apps/merinioWA2/src/store/actions/resources.js",
                       "children": [
-                        { "label": "Api(resourcesEndpoint.teams)" },
                         {
-                          "label": "dispatch(setValues(teams, 'SET_TEAMS', 'teams'))"
+                          "label": "Api(resourcesEndpoint.teams)",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
+                        },
+                        {
+                          "label": "dispatch(setValues(teams, 'SET_TEAMS', 'teams'))",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
                         }
                       ]
                     },
@@ -203,9 +258,13 @@
                       "label": "holidays",
                       "file": "apps/merinioWA2/src/store/actions/resources.js",
                       "children": [
-                        { "label": "Api(resourcesEndpoint.holidays)" },
                         {
-                          "label": "dispatch(setValues(result, 'SET_HOLIDAYS', 'holidays'))"
+                          "label": "Api(resourcesEndpoint.holidays)",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
+                        },
+                        {
+                          "label": "dispatch(setValues(result, 'SET_HOLIDAYS', 'holidays'))",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
                         }
                       ]
                     },
@@ -213,9 +272,13 @@
                       "label": "userFilters",
                       "file": "apps/merinioWA2/src/store/actions/resources.js",
                       "children": [
-                        { "label": "Api(resourcesEndpoint.userFilters)" },
                         {
-                          "label": "dispatch(setValues(result, 'SET_FILTERS', 'filters'))"
+                          "label": "Api(resourcesEndpoint.userFilters)",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
+                        },
+                        {
+                          "label": "dispatch(setValues(result, 'SET_FILTERS', 'filters'))",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
                         }
                       ]
                     },
@@ -223,9 +286,13 @@
                       "label": "userProcedures",
                       "file": "apps/merinioWA2/src/store/actions/resources.js",
                       "children": [
-                        { "label": "Api(resourcesEndpoint.userProcedures)" },
                         {
-                          "label": "dispatch(setValues(result, 'SET_PROCEDURES', 'procedures'))"
+                          "label": "Api(resourcesEndpoint.userProcedures)",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
+                        },
+                        {
+                          "label": "dispatch(setValues(result, 'SET_PROCEDURES', 'procedures'))",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
                         }
                       ]
                     },
@@ -233,9 +300,13 @@
                       "label": "userSorts",
                       "file": "apps/merinioWA2/src/store/actions/resources.js",
                       "children": [
-                        { "label": "Api(resourcesEndpoint.userSorts)" },
                         {
-                          "label": "dispatch(setValues(result, 'SET_SORTS', 'sorts'))"
+                          "label": "Api(resourcesEndpoint.userSorts)",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
+                        },
+                        {
+                          "label": "dispatch(setValues(result, 'SET_SORTS', 'sorts'))",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
                         }
                       ]
                     },
@@ -244,10 +315,12 @@
                       "file": "apps/merinioWA2/src/store/actions/resources.js",
                       "children": [
                         {
-                          "label": "Api(resourcesEndpoint.users)"
+                          "label": "Api(resourcesEndpoint.users)",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
                         },
                         {
-                          "label": "dispatch(setUsers(users))"
+                          "label": "dispatch(setUsers(users))",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
                         }
                       ]
                     },
@@ -255,9 +328,13 @@
                       "label": "userTemplates",
                       "file": "apps/merinioWA2/src/store/actions/resources.js",
                       "children": [
-                        { "label": "Api(resourcesEndpoint.userTemplates)" },
                         {
-                          "label": "dispatch(setValues(result, 'SET_USER_TEMPLATES', 'userTemplates'))"
+                          "label": "Api(resourcesEndpoint.userTemplates)",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
+                        },
+                        {
+                          "label": "dispatch(setValues(result, 'SET_USER_TEMPLATES', 'userTemplates'))",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
                         }
                       ]
                     },
@@ -265,9 +342,13 @@
                       "label": "contactTemplates",
                       "file": "apps/merinioWA2/src/store/actions/resources.js",
                       "children": [
-                        { "label": "Api(resourcesEndpoint.contactTemplates)" },
                         {
-                          "label": "dispatch(setValues(templates, 'SET_CONTACT_TEMPLATES', 'contactTemplates'))"
+                          "label": "Api(resourcesEndpoint.contactTemplates)",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
+                        },
+                        {
+                          "label": "dispatch(setValues(templates, 'SET_CONTACT_TEMPLATES', 'contactTemplates'))",
+                          "file": "apps/merinioWA2/src/store/actions/resources.js"
                         }
                       ]
                     }
