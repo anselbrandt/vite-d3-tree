@@ -12,6 +12,6 @@ const chart = Tree(data, {
   title: (d, n) => `${d.label}`, // hover text
   link: (d, n) =>
     `https://github.com/Merinio/merinioApp/blob/develop/${d.file}`,
-  width: 1152,
+  width: 2500,
 });
 svg.append(chart);

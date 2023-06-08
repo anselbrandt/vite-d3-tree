@@ -32,7 +32,248 @@
           "children": [
             {
               "label": "checkIfUsersRefreshIsNeeded",
-              "file": "apps/merinioWA2/src/store/actions/users.js"
+              "file": "apps/merinioWA2/src/store/actions/users.js",
+              "children": [
+                {
+                  "label": "setUserInfo",
+                  "file": "apps/merinioWA2/src/store/actions/users.js",
+                  "children": [
+                    {
+                      "label": "Api.get('/users/users', { params: { _id, getPasswordChangeInfo: true } })",
+                      "file": "apps/merinioWA2/src/store/actions/users.js"
+                    },
+                    {
+                      "label": "dispatch({ type: 'SET_USER_INFO', userInfo: { ...user, hiringData, currentHiringData } })",
+                      "file": "apps/merinioWA2/src/store/actions/users.js"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "file": "apps/merinioWA2/src/components/PrivateRoute.js",
+              "label": "checkIfResourcesRefreshIsNeeded",
+              "children": [
+                {
+                  "file": "apps/merinioWA2/src/store/actions/resources.js",
+                  "label": "fetchResourceUpdate",
+                  "children": [
+                    {
+                      "label": "contactConfigs",
+                      "children": [
+                        { "label": "Api(resourcesEndpoint.contactConfigs)" },
+                        {
+                          "label": "dispatch(setValues(result, 'SET_CONFIGS', 'configs'))"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "departments",
+                      "file": "apps/merinioWA2/src/store/actions/resources.js",
+                      "children": [
+                        { "label": "Api(resourcesEndpoint.departments)" },
+                        { "label": "dispatch(setDepartments(departments))" }
+                      ]
+                    },
+                    {
+                      "label": "hiringData",
+                      "file": "apps/merinioWA2/src/store/actions/resources.js",
+                      "children": [
+                        { "label": "Api(resourcesEndpoint.hiringData)" },
+                        { "label": "dispatch(setHiringData(res))" }
+                      ]
+                    },
+                    {
+                      "label": "wagePremium",
+                      "file": "apps/merinioWA2/src/store/actions/resources.js",
+                      "children": [
+                        { "label": "Api(resourcesEndpoint.wagePremiums)" },
+                        {
+                          "label": "dispatch(setValues(result, 'SET_WAGE_PREMIUMS', 'wagePremiums'))"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "punchRules",
+                      "file": "apps/merinioWA2/src/store/actions/resources.js",
+                      "children": [
+                        { "label": "Api(resourcesEndpoint.punchRules)" },
+                        {
+                          "label": " dispatch(setValues(result, 'SET_PUNCH_RULES', 'punchRules'))"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "projects",
+                      "file": "apps/merinioWA2/src/store/actions/resources.js",
+                      "children": [
+                        { "label": "Api(resourcesEndpoint.projects)" },
+                        {
+                          "label": "dispatch(setValues(projects, 'SET_PROJECTS', 'projects'))"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "projectOwners",
+                      "file": "apps/merinioWA2/src/store/actions/resources.js",
+                      "children": [
+                        { "label": "Api(resourcesEndpoint.projectOwners)" },
+                        {
+                          "label": "dispatch(setValues(projectOwners, 'SET_PROJECT_OWNERS', 'projectOwners'))"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "permissions",
+                      "file": "apps/merinioWA2/src/store/actions/resources.js",
+                      "children": [
+                        {
+                          "label": "await Api(resourcesEndpoint.userTemplates)"
+                        },
+                        {
+                          "label": "dispatch(setValues(result, 'SET_USER_TEMPLATES', 'userTemplates'))"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "requestsFields",
+                      "file": "apps/merinioWA2/src/store/actions/resources.js",
+                      "children": [
+                        { "label": "Api(resourcesEndpoint.requestFields)" },
+                        { "label": "dispatch(setRequestFields(rest))" }
+                      ]
+                    },
+                    {
+                      "label": "scheduleTypes",
+                      "file": "apps/merinioWA2/src/store/actions/resources.js",
+                      "children": [
+                        { "label": "Api(resourcesEndpoint.scheduleTypes)" },
+                        {
+                          "label": "dispatch(setValues(type, 'SET_SCHEDULE_TYPES', 'scheduleTypes'))"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "scheduleTemplates",
+                      "file": "apps/merinioWA2/src/store/actions/resources.js",
+                      "children": [
+                        {
+                          "label": "Api.get(resourcesEndpoint.scheduleTemplates, { params: { useNewReturn: true } })"
+                        },
+                        {
+                          "label": "dispatch(setValues(result, 'SET_SCHEDULE_TEMPLATES', 'scheduleTemplates'))"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "structures",
+                      "file": "apps/merinioWA2/src/store/actions/resources.js",
+                      "children": [
+                        {
+                          "label": "Api(resourcesEndpoint.structures)"
+                        },
+                        {
+                          "label": "dispatch(setStructures(res))"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "tags",
+                      "file": "apps/merinioWA2/src/store/actions/resources.js",
+                      "children": [
+                        {
+                          "label": "Api(resourcesEndpoint.tags)"
+                        },
+                        {
+                          "label": "dispatch(setTags(tags))"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "teams",
+                      "file": "apps/merinioWA2/src/store/actions/resources.js",
+                      "children": [
+                        { "label": "Api(resourcesEndpoint.teams)" },
+                        {
+                          "label": "dispatch(setValues(teams, 'SET_TEAMS', 'teams'))"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "holidays",
+                      "file": "apps/merinioWA2/src/store/actions/resources.js",
+                      "children": [
+                        { "label": "Api(resourcesEndpoint.holidays)" },
+                        {
+                          "label": "dispatch(setValues(result, 'SET_HOLIDAYS', 'holidays'))"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "userFilters",
+                      "file": "apps/merinioWA2/src/store/actions/resources.js",
+                      "children": [
+                        { "label": "Api(resourcesEndpoint.userFilters)" },
+                        {
+                          "label": "dispatch(setValues(result, 'SET_FILTERS', 'filters'))"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "userProcedures",
+                      "file": "apps/merinioWA2/src/store/actions/resources.js",
+                      "children": [
+                        { "label": "Api(resourcesEndpoint.userProcedures)" },
+                        {
+                          "label": "dispatch(setValues(result, 'SET_PROCEDURES', 'procedures'))"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "userSorts",
+                      "file": "apps/merinioWA2/src/store/actions/resources.js",
+                      "children": [
+                        { "label": "Api(resourcesEndpoint.userSorts)" },
+                        {
+                          "label": "dispatch(setValues(result, 'SET_SORTS', 'sorts'))"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "users",
+                      "file": "apps/merinioWA2/src/store/actions/resources.js",
+                      "children": [
+                        {
+                          "label": "Api(resourcesEndpoint.users)"
+                        },
+                        {
+                          "label": "dispatch(setUsers(users))"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "userTemplates",
+                      "file": "apps/merinioWA2/src/store/actions/resources.js",
+                      "children": [
+                        { "label": "Api(resourcesEndpoint.userTemplates)" },
+                        {
+                          "label": "dispatch(setValues(result, 'SET_USER_TEMPLATES', 'userTemplates'))"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "contactTemplates",
+                      "file": "apps/merinioWA2/src/store/actions/resources.js",
+                      "children": [
+                        { "label": "Api(resourcesEndpoint.contactTemplates)" },
+                        {
+                          "label": "dispatch(setValues(templates, 'SET_CONTACT_TEMPLATES', 'contactTemplates'))"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
